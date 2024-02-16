@@ -41,4 +41,4 @@ if ssmachine == "Machine 1" and ssheatbox == "Speed":
 
 
 
-st.session_state
+#st.session_state
