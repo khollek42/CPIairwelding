@@ -1,18 +1,51 @@
 import streamlit as st
 import functions as tf
+import base64
 
 
 
-st.title("CPI Air Welding")
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+
+def set_png_as_page_bg(png_file):
+    bin_str = get_base64_of_bin_file(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
+
+
+set_png_as_page_bg('background.png')
+
+
+
+
+
+
+
+col1, col2 = st.columns([.2,.8])
+with col1:
+    st.image("cpilogo.png")
+with col2:
+    st.title("Air Welding")
 
 #Selection boxes:
 st.selectbox('Machine: ', ("Machine 1", "Machine 2", "Machine 3(Down)", "Machine 4"), key='machine')
 st.selectbox("Material: ", ("1055", "1365", "2051", "4090", "vinyl"), key='material')
 
-col1, col2 = st.columns(2)
-with col1:
+col3, col4 = st.columns(2)
+with col3:
     st.selectbox("Seam or Tape:", ("Seam","Tape"), key="seamtape")
-with col2:
+with col4:
     st.selectbox("Heat or Speed: ", ('Heat','Speed'), key="heatbox")
 
 
