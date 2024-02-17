@@ -246,12 +246,14 @@ def get_speed4090t_2(heat):
     return speed
 
 def get_heat2051_2(speed):
-    x = (520.392 * speed) - 24.6119
-    i = math.log(x)
-    n = 165.926 * i
-    result = n - 699.76
-    return result
-
+    try:
+      x = (520.392 * speed) - 24.6119
+      i = math.log(x)
+      n = 165.926 * i
+      result = n - 699.76
+      return result
+    except ValueError:
+        pass
 
 def get_speed2051_2(heat):
     heat1 = heat * 1000
