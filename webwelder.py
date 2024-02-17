@@ -3,7 +3,7 @@ import functions as tf
 import base64
 
 
-
+#sets local background img
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -25,11 +25,6 @@ def set_png_as_page_bg(png_file):
 
 
 set_png_as_page_bg('background.png')
-
-
-
-
-
 
 
 col1, col2 = st.columns([.2,.8])
@@ -308,7 +303,7 @@ try:
         st.text("Heat:")
         st.info(tf.get_heatvinyl_4(speed))
 
-    st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! Have to Calibrate machine 1 and 4")
+    st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! ")
 except ValueError:
     st.exception("Wrong input. Type in a number.")
 
