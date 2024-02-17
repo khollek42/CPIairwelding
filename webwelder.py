@@ -1,8 +1,7 @@
 import streamlit as st
 import functions as tf
 
-def get_heat():
-    pass
+
 
 st.title("CPI Air Welding")
 
@@ -25,273 +24,262 @@ ssheatbox = st.session_state['heatbox']
 
 ss = st.session_state
 
-#machine 1
-# get speed setting:
-if ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed1055_2(heat))
+try:
+    #Seaming
 
+    #machine 1
+    # get speed setting:
+    if ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1055_1(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat1055_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed1365_2(heat))
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1055_1(speed))
 
+    # get speed setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1365_1(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat1365_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed2051_2(heat))
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1365_1(speed))
 
+    # get speed setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed2051_1(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat2051_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed4090_2(heat))
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat2051_1(speed))
 
+    # get speed setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed4090_1(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat4090_2(speed))
 
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat4090_1(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speedvinyl_2(heat))
 
+    # get speed setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speedvinyl_1(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heatvinyl_2(speed))
 
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heatvinyl_1(speed))
 
-#machine 2
 
+    #machine 2
 
-# get speed setting:
-if ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed1055_2(heat))
 
+    # get speed setting:
+    if ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1055_2(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat1055_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed1365_2(heat))
+    # get heat setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1055_2(speed))
+
+    # get speed setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1365_2(heat))
 
 
+
+    # get heat setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1365_2(speed))
+
+    # get speed setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed2051_2(heat))
 
-# get heat setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat1365_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed2051_2(heat))
+
+    # get heat setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat2051_2(speed))
 
+    # get speed setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed4090_2(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat2051_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed4090_2(heat))
+    # get heat setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat4090_2(speed))
 
+
+    # get speed setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speedvinyl_2(heat))
 
 
-# get heat setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat4090_2(speed))
 
+    # get heat setting:
+    elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heatvinyl_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speedvinyl_2(heat))
+    # machine 4
+    # get speed setting:
+    if ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1055_4(heat))
 
 
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1055_4(speed))
 
-# get heat setting:
-elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heatvinyl_2(speed))
+    # get speed setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1365_4(heat))
 
-# machine 4
-# get speed setting:
-if ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed1055_2(heat))
 
 
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1365_4(speed))
 
-# get heat setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat1055_2(speed))
+    # get speed setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed2051_4(heat))
 
-# get speed setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed1365_2(heat))
 
 
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat2051_4(speed))
 
-# get heat setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat1365_2(speed))
+    # get speed setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed4090_4(heat))
 
-# get speed setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed2051_2(heat))
 
 
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat4090_4(speed))
 
-# get heat setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat2051_2(speed))
 
-# get speed setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speed4090_2(heat))
+    # get speed setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speedvinyl_4(heat))
 
 
 
-# get heat setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heat4090_2(speed))
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heatvinyl_4(speed))
 
+    st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! Have to Calibrate machine 1 and 4")
+except ValueError:
+    st.exception("Wrong input. Type in a number.")
 
-# get speed setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-    st.text_input(label="Heat", key="heat", value=float(0))
-    heat = float(ss["heat"])
-    st.text("Speed:")
-    st.info(tf.get_speedvinyl_2(heat))
 
-
-
-# get heat setting:
-elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-    st.text_input(label="Speed", key="speed", value=float(0))
-    speed = float(ss["speed"])
-    st.text("Heat:")
-    st.info(tf.get_heatvinyl_2(speed))
-
-st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! Have to Calibrate machine 1 and 4")
-
-#st.text_input(label="speed", key="speed", value=float(0))
-
-
-
-#speed = sl.session_state["speed"]
-#speed = float(speed)
-#got_heat = tf.hmaterial1055_3test2(speed)
-
-#st.info(tf.hmaterial1055_3test2(speed))
-
-#st.text_input(label="heat", key="heat", value=float(0))
-
-#heat = sl.session_state["heat"]
-#heat = float(heat)
-
-#st.info(tf.smaterial1055_3test2(heat))
 
 
 
