@@ -274,7 +274,7 @@ elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "vinyl" 
     st.text("Heat:")
     st.info(tf.get_heatvinyl_2(speed))
 
-st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! Have to Calibrate machine 1 an 4")
+st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! Have to Calibrate machine 1 and 4")
 
 #st.text_input(label="speed", key="speed", value=float(0))
 
