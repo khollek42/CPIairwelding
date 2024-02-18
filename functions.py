@@ -4,7 +4,7 @@ import math
 #Machine 1
 
 def get_heat1055_1(speed):
-    x = (9.8142 * speed) + 33.9848
+    x = (9.8142 * speed) + 35.4848
     i = math.log(x)
     n = 494.602 * i
     result = n - 1609.4
@@ -17,7 +17,7 @@ def get_speed1055_1(heat):
     heat3 = heat2 / 494602
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 33.9848
+    heat5 = heat4 - 35.4848
     result = heat5 / 9.8142
     print(heat5)
     return result
@@ -32,7 +32,7 @@ def get_speed1055t_1(heat):
     return speed
 
 def get_heat1365_1(speed):
-    x = (593.806 * speed) + 7429.65
+    x = (593.806 * speed) + 7504.9
     i = math.log(x)
     n = 1364.18 * i
     result = n - 11950.3
@@ -45,7 +45,7 @@ def get_speed1365_1(heat):
     heat3 = heat2 / 136418
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 7429.65
+    heat5 = heat4 - 7504.9
     result = heat5 / 593.806
     print(heat5)
     return result
@@ -70,7 +70,7 @@ def get_speed1365t_1(heat):
     return result
 
 def get_heat4090_1(speed):
-    x = (1395.54 * speed) + 9901.57
+    x = (1395.54 * speed) + 10024.43
     i = math.log(x)
     n = 1231.18 * i
     result = n - 11100.9
@@ -83,7 +83,7 @@ def get_speed4090_1(heat):
     heat3 = heat2 / 123118
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 9901.57
+    heat5 = heat4 - 10024.43
     result = heat5 / 1395.54
     print(heat5)
     return result
@@ -99,7 +99,7 @@ def get_speed4090t_1(heat):
 
 def get_heat2051_1(speed):
     try:
-      x = (520.392 * speed) - 24.6119
+      x = (520.392 * speed) + 50.7
       i = math.log(x)
       n = 165.926 * i
       result = n - 699.76
@@ -113,7 +113,7 @@ def get_speed2051_1(heat):
     heat3 = heat2 / 165926
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 + 24.6119
+    heat5 = heat4 - 50.7
     result = heat5 / 520.392
     print(heat5)
     return result
@@ -128,7 +128,7 @@ def get_speed2051t_1(heat):
 
 
 def get_heatvinyl_1(speed):
-    x = (789.232 * speed) + 12432.3
+    x = (789.232 * speed) + 12522.05
     i = math.log(x)
     n = 1857.22 * i
     result = n - 17307.9
@@ -141,7 +141,7 @@ def get_speedvinyl_1(heat):
     heat3 = heat2 / 185722
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 12432.3
+    heat5 = heat4 - 12522.05
     result = heat5 / 789.232
     print(heat5)
     return result
