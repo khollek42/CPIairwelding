@@ -1,4 +1,8 @@
 import math
+import streamlit
+
+
+
 
 
 #Machine 1
@@ -178,6 +182,25 @@ def get_speed1055_2(heat):
     heat4 = math.pow(e, heat3)
     heat5 = heat4 - 33.9848
     result = heat5 / 9.8142
+    print(heat5)
+    return result
+
+def get_heat1055_2_2(speed):
+    x = (1107.86 * speed) + 6955.55
+    i = math.log(x)
+    n = 1023.46 * i
+    result = n - 8851.45
+    return result
+"""formula for seaming 1055 on machine 2"""
+
+def get_speed1055_2_2(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 885145
+    heat3 = heat2 / 102346
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 6955.55
+    result = heat5 / 1107.86
     print(heat5)
     return result
 
