@@ -232,6 +232,25 @@ def get_speed1365_2(heat):
     print(heat5)
     return result
 
+def get_heat1365_2_2(speed):
+    x = (593.806 * speed) + 7429.65
+    i = math.log(x)
+    n = 1364.18 * i
+    result = n - 11950.3
+    return result
+"""formula for seaming 1365 on machine 2"""
+
+def get_speed1365_2_2(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 1195030
+    heat3 = heat2 / 136418
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 7429.65
+    result = heat5 / 593.806
+    print(heat5)
+    return result
+
 def get_heat1365t_2(speed):
     x = (9.8142 * speed) + 33.9848
     i = math.log(x)
@@ -318,6 +337,25 @@ def get_heatvinyl_2(speed):
 
 
 def get_speedvinyl_2(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 1730790
+    heat3 = heat2 / 185722
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 12432.3
+    result = heat5 / 789.232
+    print(heat5)
+    return result
+
+def get_heatvinyl_2_2(speed):
+    x = (789.232 * speed) + 12432.3
+    i = math.log(x)
+    n = 1857.22 * i
+    result = n - 17307.9
+    return result
+
+
+def get_speedvinyl_2_2(heat):
     heat1 = heat * 100
     heat2 = heat1 + 1730790
     heat3 = heat2 / 185722

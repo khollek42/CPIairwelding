@@ -166,7 +166,7 @@ try:
             speed = float(ss["speed"])
             st.text("Heat:")
             st.info(tf.get_heat1055_2(speed))
-        if st.session_state["wheel_size"] == "2 in":
+        elif st.session_state["wheel_size"] == "2 in":
             st.text_input(label="Speed", key="speed", value=float(0))
             speed = float(ss["speed"])
             st.text("Heat:")
@@ -176,19 +176,34 @@ try:
 
     # get speed setting:
     elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
-        st.text_input(label="Heat", key="heat", value=float(0))
-        heat = float(ss["heat"])
-        st.text("Speed:")
-        st.info(tf.get_speed1365_2(heat))
+        st.selectbox("Wheel Size", ["1 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speed1365_2(heat))
+        elif st.session_state["wheel_size"] == "2 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speed1365_2_2(heat))
 
 
 
     # get heat setting:
     elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
-        st.text_input(label="Speed", key="speed", value=float(0))
-        speed = float(ss["speed"])
-        st.text("Heat:")
-        st.info(tf.get_heat1365_2(speed))
+        st.selectbox("Wheel Size", ["1 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heat1365_2(speed))
+        elif st.session_state["wheel_size"] == "2 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heat1365_2_2(speed))
+
 
     # get speed setting:
     elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
@@ -225,19 +240,31 @@ try:
 
     # get speed setting:
     elif ssmachine == "Machine 2" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-        st.text_input(label="Heat", key="heat", value=float(0))
-        heat = float(ss["heat"])
-        st.text("Speed:")
-        st.info(tf.get_speedvinyl_2(heat))
-
-
+        st.selectbox("Wheel Size", ["1 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speedvinyl_2(heat))
+        if st.session_state["wheel_size"] == "2 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speedvinyl_2_2(heat))
 
     # get heat setting:
     elif ssmachine == "Machine 2" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Seam":
-        st.text_input(label="Speed", key="speed", value=float(0))
-        speed = float(ss["speed"])
-        st.text("Heat:")
-        st.info(tf.get_heatvinyl_2(speed))
+        st.selectbox("Wheel Size", ["1 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heatvinyl_2(speed))
+        if st.session_state["wheel_size"] == "2 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heatvinyl_2_2(speed))
 
     # machine 4
     # get speed setting:
