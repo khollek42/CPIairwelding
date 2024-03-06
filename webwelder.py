@@ -34,7 +34,7 @@ with col2:
     st.title("Air Welding")
 
 #Selection boxes:
-st.selectbox('Machine: ', ("Machine 1", "Machine 2", "Machine 3", "Machine 4"), key='machine')
+st.selectbox('Machine: ', ("Machine 1", "Machine 2", "Machine 3", "Machine 4", "T-100 Tape"), key='machine')
 st.selectbox("Material: ", ("1055", "1365", "2051", "4090", "vinyl"), key='material')
 
 col3, col4 = st.columns(2)
@@ -508,7 +508,30 @@ try:
         st.text("Heat:")
         st.info(tf.get_heatvinylt_3(speed))
 
+    # T-100 Tape Machine
+    if ssmachine == "T-100 Tape" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heatvinylt_t100tape(speed))
 
+    elif ssmachine == "T-100 Tape" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speedvinylt_t100tape(heat))
+
+    elif ssmachine == "T-100 Tape" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1055t_t100tape(speed))
+
+    elif ssmachine == "T-100 Tape" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1055t_t100tape(heat))
 
     st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! ")
 except ValueError:
