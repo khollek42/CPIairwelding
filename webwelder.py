@@ -442,6 +442,23 @@ try:
         st.info(tf.get_heatvinyl_4(speed))
 
     # Tape Settings
+    # Machine 1
+    # get speed setting:
+    if ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1055t_1(heat))
+
+
+
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1055t_1(speed))
+
 
     # Machine 3
     # get speed setting:
