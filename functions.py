@@ -403,13 +403,22 @@ def get_speedvinyl_3(heat):
     return result
 
 def get_heatvinylt_3(speed):
-    temp = 520 + (speed * 100)
-    return temp
+    x = (0.451196 * speed) + 46.4283
+    i = math.log(x)
+    n = 11375.5 * i
+    result = n - 43100.1
+    return result
 
 
 def get_speedvinylt_3(heat):
-    speed = float((heat - 520) / 100)
-    return speed
+    heat1 = heat * 10
+    heat2 = heat1 + 431001
+    heat3 = heat2 / 113755
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 46.4283
+    result = heat5 / 0.451196
+    return result
 
 def get_heat1055_3(speed):
     x = (13.2583 * speed) + 111.243
