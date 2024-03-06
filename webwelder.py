@@ -296,20 +296,20 @@ try:
         st.info(tf.get_heat1055_3(speed))
 
     # get speed setting:
-#    elif ssmachine == "Machine 3" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
-#        st.text_input(label="Heat", key="heat", value=float(0))
-#        heat = float(ss["heat"])
-#        st.text("Speed:")
-#        st.info(tf.get_speed1365_3(heat))
+    elif ssmachine == "Machine 3" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1365_3(heat))
 
 
 
     # get heat setting:
-#    elif ssmachine == "Machine 3" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
-#        st.text_input(label="Speed", key="speed", value=float(0))
-#        speed = float(ss["speed"])
-#        st.text("Heat:")
-#        st.info(tf.get_heat1365_3(speed))
+    elif ssmachine == "Machine 3" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1365_3(speed))
 
     # get speed setting:
 #    elif ssmachine == "Machine 3" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":

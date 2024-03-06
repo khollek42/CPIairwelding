@@ -439,21 +439,21 @@ def get_speed1055t_3(heat):
     return speed
 
 def get_heat1365_3(speed):
-    x = (9.8142 * speed) + 33.9848
+    x = (12.9783 * speed) + 38.9918
     i = math.log(x)
-    n = 494.602 * i
-    result = n - 1609.4
+    n = 765.11 * i
+    result = n - 2493.26
     return result
-"""formula for seaming 1365 on machine 2"""
+"""formula for seaming 1365 on machine 3"""
 
 def get_speed1365_3(heat):
-    heat1 = heat * 1000
-    heat2 = heat1 + 1609400
-    heat3 = heat2 / 494602
+    heat1 = heat * 100
+    heat2 = heat1 + 249326
+    heat3 = heat2 / 76511
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 33.9848
-    result = heat5 / 9.8142
+    heat5 = heat4 - 38.9918
+    result = heat5 / 12.9783
     return result
 
 def get_heat1365t_3(speed):
@@ -462,7 +462,7 @@ def get_heat1365t_3(speed):
     n = 494.602 * i
     result = n - 1609.4
     return result
-"""formula for seaming 1365 on machine 2"""
+"""formula for tapeing 1365 on machine 3"""
 
 def get_speed1365t_3(heat):
     heat1 = heat * 1000
