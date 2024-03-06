@@ -430,13 +430,21 @@ def get_speed1055_3(heat):
     return result
 
 def get_heat1055t_3(speed):
-    temp = 490 + (speed * 100)
-    return temp
-
+    x = (0.2056 * speed) + 60.1457
+    i = math.log(x)
+    n = 30224.8 * i
+    result = n - 123305
+    return result
 
 def get_speed1055t_3(heat):
-    speed = float((heat - 490) / 100)
-    return speed
+    heat1 = heat * 10
+    heat2 = heat1 + 1233050
+    heat3 = heat2 / 302248
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 60.1457
+    result = heat5 / 0.2056
+    return result
 
 def get_heat1365_3(speed):
     x = (12.9783 * speed) + 38.9918

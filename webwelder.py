@@ -441,9 +441,31 @@ try:
         st.text("Heat:")
         st.info(tf.get_heatvinyl_4(speed))
 
+    # Tape Settings
+
+    # Machine 3
+    # get speed setting:
+    if ssmachine == "Machine 3" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1055t_3(heat))
+
+
+    # get heat setting:
+    elif ssmachine == "Machine 3" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1055t_3(speed))
+
+
+
     st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development. Adding new features soon! ")
 except ValueError:
     st.exception("Wrong input. Type in a number.")
+
+
 
 
 
