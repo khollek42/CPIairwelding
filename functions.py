@@ -31,7 +31,7 @@ def get_heat1055t_1(speed):
     n = 1243.27 * i
     result = n - 11122.3
     return result
-"""formula for taping one machine 1"""
+"""formula for taping on machine 1"""
 
 def get_speed1055t_1(heat):
     heat1 = heat * 100
@@ -154,20 +154,25 @@ def get_speedvinyl_1(heat):
     return result
 
 def get_heatvinylt_1(speed):
-    x = (789.232 * speed) + 12432.3
+    """formula for taping on machine 1"""
+    x = (865.785 * speed) + 9290.42
     i = math.log(x)
-    n = 1857.22 * i
-    result = n - 17307.9
+    n = 1243.27 * i
+    result = n - 11122.3
+    return result
+
+def get_speedvinylt_1(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 1112230
+    heat3 = heat2 / 124327
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 9290.42
+    result = heat5 / 865.785
     return result
 
 
-def get_speedvinylt_1(heat):
-    speed = float((heat - 1) / 1)
-    return speed
-
-
 #machine 2
-
 
 def get_heat1055_2(speed):
     x = (9.8142 * speed) + 33.9848
