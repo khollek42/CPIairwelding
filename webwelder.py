@@ -509,17 +509,17 @@ try:
         st.info(tf.get_heatvinylt_3(speed))
 
     # T-100 Tape Machine
-#    if ssmachine == "T-100 Tape" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Tape":
-#        st.text_input(label="Speed", key="speed", value=float(0))
-#        speed = float(ss["speed"])
-#        st.text("Heat:")
-#        st.info(tf.get_heatvinylt_t100tape(speed))
+    if ssmachine == "T-100 Tape" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heatvinylt_t100tape(speed))
 
-#    elif ssmachine == "T-100 Tape" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Tape":
-#        st.text_input(label="Heat", key="heat", value=float(0))
-#        heat = float(ss["heat"])
-#        st.text("Speed:")
-#        st.info(tf.get_speedvinylt_t100tape(heat))
+    elif ssmachine == "T-100 Tape" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speedvinylt_t100tape(heat))
 
     elif ssmachine == "T-100 Tape" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Tape":
         st.text_input(label="Speed", key="speed", value=float(0))

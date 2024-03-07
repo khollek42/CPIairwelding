@@ -712,21 +712,22 @@ def get_speedvinylt_4(heat):
 
 # T-100 Tape Machine
 def get_speedvinylt_t100tape(heat):
-    heat1 = heat * 100
-    heat2 = heat1 + 1730790
-    heat3 = heat2 / 185722
+    heat1 = heat * 10
+    heat2 = heat1 + 158303
+    heat3 = heat2 / 21430
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 12432.3
-    result = heat5 / 789.232
+    heat5 = heat4 - 2179
+    result = heat5 / 3.51168
     return result
 
 def get_heatvinylt_t100tape(speed):
-    x = (789.232 * speed) + 12432.3
+    x = (3.51168 * speed) + 2179
     i = math.log(x)
-    n = 1857.22 * i
-    result = n - 17307.9
+    n = 2143 * i
+    result = n - 15830.3
     return result
+
 
 def get_speed1055t_t100tape(heat):
     heat1 = heat * 10
