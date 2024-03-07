@@ -371,8 +371,16 @@ try:
             st.info(tf.get_speed1055_4(heat))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+           # st.text_input(label="Heat", key="heat", value=float(0))
+           # heat = float(ss["heat"])
+           # st.text("Speed:")
+           # st.info(tf.get_speed1055_4_15(heat))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+           # st.text_input(label="Heat", key="heat", value=float(0))
+           # heat = float(ss["heat"])
+           # st.text("Speed:")
+           # st.info(tf.get_speed1055_4_20(heat))
 
     # get heat setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
@@ -384,8 +392,16 @@ try:
             st.info(tf.get_heat1055_4(speed))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+           # st.text_input(label="Speed", key="speed", value=float(0))
+           # speed = float(ss["speed"])
+           # st.text("Heat:")
+           # st.info(tf.get_heat1055_4_15(speed))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+           # st.text_input(label="Speed", key="speed", value=float(0))
+           # speed = float(ss["speed"])
+           # st.text("Heat:")
+           # st.info(tf.get_heat1055_4_20(speed))
 
     # get speed setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
@@ -397,8 +413,16 @@ try:
             st.info(tf.get_speed1365_4(heat))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+           # st.text_input(label="Heat", key="heat", value=float(0))
+           # heat = float(ss["heat"])
+           # st.text("Speed:")
+           # st.info(tf.get_speed1365_4_15(heat))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+           # st.text_input(label="Heat", key="heat", value=float(0))
+           # heat = float(ss["heat"])
+           # st.text("Speed:")
+           # st.info(tf.get_speed1365_4_20(heat))
 
 
     # get heat setting:
@@ -411,8 +435,16 @@ try:
             st.info(tf.get_heat1365_4(speed))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+           # st.text_input(label="Speed", key="speed", value=float(0))
+           # speed = float(ss["speed"])
+           # st.text("Heat:")
+           # st.info(tf.get_heat1365_4_15(speed))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+           # st.text_input(label="Speed", key="speed", value=float(0))
+           # speed = float(ss["speed"])
+           # st.text("Heat:")
+           # st.info(tf.get_heat1365_4_20(speed))
 
     # get speed setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
@@ -424,8 +456,16 @@ try:
             st.info(tf.get_speed2051_4(heat))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+           # st.text_input(label="Heat", key="heat", value=float(0))
+           # heat = float(ss["heat"])
+           # st.text("Speed:")
+           # st.info(tf.get_speed2051_4_15(heat))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+           # st.text_input(label="Heat", key="heat", value=float(0))
+           # heat = float(ss["heat"])
+           # st.text("Speed:")
+           # st.info(tf.get_speed2051_4_20(heat))
 
 
 
@@ -439,8 +479,16 @@ try:
             st.info(tf.get_heat2051_4(speed))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+            # st.text_input(label="Speed", key="speed", value=float(0))
+            # speed = float(ss["speed"])
+            # st.text("Heat:")
+            # st.info(tf.get_heat2051_4_15(speed))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+            # st.text_input(label="Speed", key="speed", value=float(0))
+            # speed = float(ss["speed"])
+            # st.text("Heat:")
+            # st.info(tf.get_heat2051_4_20(speed))
 
     # get speed setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
@@ -452,8 +500,16 @@ try:
             st.info(tf.get_speed4090_4(heat))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+            # st.text_input(label="Heat", key="heat", value=float(0))
+            # heat = float(ss["heat"])
+            # st.text("Speed:")
+            # st.info(tf.get_speed4090_4_15(heat))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+            # st.text_input(label="Heat", key="heat", value=float(0))
+            # heat = float(ss["heat"])
+            # st.text("Speed:")
+            # st.info(tf.get_speed4090_4_20(heat))
 
 
     # get heat setting:
@@ -466,8 +522,16 @@ try:
             st.info(tf.get_heat4090_4(speed))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
+            # st.text_input(label="Speed", key="speed", value=float(0))
+            # speed = float(ss["speed"])
+            # st.text("Heat:")
+            # st.info(tf.get_heat4090_4_15(speed))
         elif st.session_state["wheel_size"] == "2 in":
             pass
+            # st.text_input(label="Speed", key="speed", value=float(0))
+            # speed = float(ss["speed"])
+            # st.text("Heat:")
+            # st.info(tf.get_heat4090_4_20(speed))
 
 
     # get speed setting:
