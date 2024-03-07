@@ -580,12 +580,12 @@ def get_speed2051t_3(heat):
 #machine 4
 
 def get_heat1055_4(speed):
-    x = (9.8142 * speed) + 33.9848
+    x = (9.8142 * speed) + 35.4848
     i = math.log(x)
     n = 494.602 * i
     result = n - 1609.4
     return result
-"""formula for seaming 1055 on machine 2"""
+"""formula for seaming 1055 on machine 1"""
 
 def get_speed1055_4(heat):
     heat1 = heat * 1000
@@ -593,7 +593,7 @@ def get_speed1055_4(heat):
     heat3 = heat2 / 494602
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 33.9848
+    heat5 = heat4 - 35.4848
     result = heat5 / 9.8142
     return result
 
@@ -857,7 +857,7 @@ def get_speed2051t_4(heat):
 
 
 def get_heatvinyl_4(speed):
-    x = (789.232 * speed) + 12432.3
+    x = (789.232 * speed) + 12522.05
     i = math.log(x)
     n = 1857.22 * i
     result = n - 17307.9
@@ -870,7 +870,7 @@ def get_speedvinyl_4(heat):
     heat3 = heat2 / 185722
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 12432.3
+    heat5 = heat4 - 12522.05
     result = heat5 / 789.232
     return result
 
