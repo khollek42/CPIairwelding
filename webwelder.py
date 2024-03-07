@@ -328,20 +328,20 @@ try:
 #        st.info(tf.get_heat2051_3(speed))
 
     # get speed setting:
-#    elif ssmachine == "Machine 3" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
-#        st.text_input(label="Heat", key="heat", value=float(0))
-#        heat = float(ss["heat"])
-#        st.text("Speed:")
-#        st.info(tf.get_speed4090_3(heat))
+    elif ssmachine == "Machine 3" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed4090_3(heat))
 
 
 
     # get heat setting:
-#    elif ssmachine == "Machine 3" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
-#        st.text_input(label="Speed", key="speed", value=float(0))
-#        speed = float(ss["speed"])
-#        st.text("Heat:")
-#        st.info(tf.get_heat4090_3(speed))
+    elif ssmachine == "Machine 3" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat4090_3(speed))
 
 
     # get speed setting:

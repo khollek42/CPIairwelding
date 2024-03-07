@@ -524,13 +524,22 @@ def get_speed955_3(heat):
     return speed
 
 def get_heat4090_3(speed):
-    temp = 1 + (speed * 1)
-    return temp
+    x = (14.5885 * speed) + 5.30373
+    i = math.log(x)
+    n = 424.062 * i
+    result = n - 761.35
+    return result
 
 
 def get_speed4090_3(heat):
-    speed = float((heat - 1) / 1)
-    return speed
+    heat1 = heat * 1000
+    heat2 = heat1 + 761350
+    heat3 = heat2 / 424062
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 5.30373
+    result = heat5 / 14.5885
+    return result
 
 def get_heat4090t_3(speed):
     temp = 1 + (speed * 1)
