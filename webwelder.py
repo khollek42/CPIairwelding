@@ -550,7 +550,7 @@ try:
         st.text("Heat:")
         st.info(tf.get_heatvinyl_4(speed))
 
-    # Tape Settings
+# Tape Settings
     # Machine 1
     # get speed setting:
     if ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Tape":
@@ -583,6 +583,22 @@ try:
         speed = float(ss["speed"])
         st.text("Heat:")
         st.info(tf.get_heatvinylt_1(speed))
+
+    # get speed setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed4090t_1(heat))
+
+
+
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat4090t_1(speed))
 
 
     # Machine 3
@@ -641,6 +657,24 @@ try:
         heat = float(ss["heat"])
         st.text("Speed:")
         st.info(tf.get_speed1055t_t100tape(heat))
+
+
+    # Machine 4
+    # Tape settings
+    # get speed setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed4090t_4(heat))
+
+        # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat4090t_4(speed))
+
 
     st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development.\
      Adding new features soon! ")

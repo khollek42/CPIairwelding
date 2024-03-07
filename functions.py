@@ -98,13 +98,22 @@ def get_speed4090_1(heat):
     return result
 
 def get_heat4090t_1(speed):
-    temp = 1 + (speed * 1)
-    return temp
+    x = (627.388 * speed) + 6974.79
+    i = math.log(x)
+    n = 1049.79 * i
+    result = n - 9017.08
+    return result
 
 
 def get_speed4090t_1(heat):
-    speed = float((heat - 1) / 1)
-    return speed
+    heat1 = heat * 100
+    heat2 = heat1 + 901708
+    heat3 = heat2 / 104979
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 6974.79
+    result = heat5 / 627.388
+    return result
 
 def get_heat2051_1(speed):
     try:
@@ -760,13 +769,22 @@ def get_speed4090_4_20(heat):
     return result
 
 def get_heat4090t_4(speed):
-    temp = 1 + (speed * 1)
-    return temp
+    x = (833.434 * speed) + 4991.15
+    i = math.log(x)
+    n = 752.866 * i
+    result = n - 6177.85
+    return result
 
 
 def get_speed4090t_4(heat):
-    speed = float((heat - 1) / 1)
-    return speed
+    heat1 = heat * 1000
+    heat2 = heat1 + 6177850
+    heat3 = heat2 / 752866
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 4991.15
+    result = heat5 / 833.434
+    return result
 
 def get_heat2051_4(speed):
     try:
