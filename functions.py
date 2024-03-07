@@ -579,6 +579,42 @@ def get_speed1055_4(heat):
     result = heat5 / 9.8142
     return result
 
+def get_heat1055_4_15(speed):
+    x = (9.8142 * speed) + 33.9848
+    i = math.log(x)
+    n = 494.602 * i
+    result = n - 1609.4
+    return result
+"""formula for seaming 1055 on machine 2"""
+
+def get_speed1055_4_15(heat):
+    heat1 = heat * 1000
+    heat2 = heat1 + 1609400
+    heat3 = heat2 / 494602
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 33.9848
+    result = heat5 / 9.8142
+    return result
+
+def get_heat1055_4_20(speed):
+    x = (9.8142 * speed) + 33.9848
+    i = math.log(x)
+    n = 494.602 * i
+    result = n - 1609.4
+    return result
+"""formula for seaming 1055 on machine 2"""
+
+def get_speed1055_4_20(heat):
+    heat1 = heat * 1000
+    heat2 = heat1 + 1609400
+    heat3 = heat2 / 494602
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 33.9848
+    result = heat5 / 9.8142
+    return result
+
 def get_heat1055t_4(speed):
     temp = 1 + (speed * 1)
     return temp
@@ -597,6 +633,42 @@ def get_heat1365_4(speed):
 """formula for seaming 1365 on machine 2"""
 
 def get_speed1365_4(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 1195030
+    heat3 = heat2 / 136418
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 7429.65
+    result = heat5 / 593.806
+    return result
+
+def get_heat1365_4_15(speed):
+    x = (593.806 * speed) + 7429.65
+    i = math.log(x)
+    n = 1364.18 * i
+    result = n - 11950.3
+    return result
+"""formula for seaming 1365 on machine 2"""
+
+def get_speed1365_4_15(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 1195030
+    heat3 = heat2 / 136418
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 7429.65
+    result = heat5 / 593.806
+    return result
+
+def get_heat1365_4_20(speed):
+    x = (593.806 * speed) + 7429.65
+    i = math.log(x)
+    n = 1364.18 * i
+    result = n - 11950.3
+    return result
+"""formula for seaming 1365 on machine 2"""
+
+def get_speed1365_4_20(heat):
     heat1 = heat * 100
     heat2 = heat1 + 1195030
     heat3 = heat2 / 136418
@@ -642,6 +714,42 @@ def get_speed4090_4(heat):
     result = heat5 / 1395.54
     return result
 
+def get_heat4090_4_15(speed):
+    x = (1395.54 * speed) + 9901.57
+    i = math.log(x)
+    n = 1231.18 * i
+    result = n - 11100.9
+    return result
+
+
+def get_speed4090_4_15(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 1110090
+    heat3 = heat2 / 123118
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 9901.57
+    result = heat5 / 1395.54
+    return result
+
+def get_heat4090_4_20(speed):
+    x = (1395.54 * speed) + 9901.57
+    i = math.log(x)
+    n = 1231.18 * i
+    result = n - 11100.9
+    return result
+
+
+def get_speed4090_4_20(heat):
+    heat1 = heat * 100
+    heat2 = heat1 + 1110090
+    heat3 = heat2 / 123118
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 9901.57
+    result = heat5 / 1395.54
+    return result
+
 def get_heat4090t_4(speed):
     temp = 1 + (speed * 1)
     return temp
@@ -670,6 +778,47 @@ def get_speed2051_4(heat):
     heat5 = heat4 + 24.6119
     result = heat5 / 520.392
     return result
+
+def get_heat2051_4_15(speed):
+    try:
+      x = (520.392 * speed) - 24.6119
+      i = math.log(x)
+      n = 165.926 * i
+      result = n - 699.76
+      return result
+    except ValueError:
+        pass
+
+def get_speed2051_4_15(heat):
+    heat1 = heat * 1000
+    heat2 = heat1 + 699760
+    heat3 = heat2 / 165926
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 + 24.6119
+    result = heat5 / 520.392
+    return result
+
+def get_heat2051_4_20(speed):
+    try:
+      x = (520.392 * speed) - 24.6119
+      i = math.log(x)
+      n = 165.926 * i
+      result = n - 699.76
+      return result
+    except ValueError:
+        pass
+
+def get_speed2051_4_20(heat):
+    heat1 = heat * 1000
+    heat2 = heat1 + 699760
+    heat3 = heat2 / 165926
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 + 24.6119
+    result = heat5 / 520.392
+    return result
+
 def get_heat2051t_4(speed):
     temp = 1 + (speed * 1)
     return temp

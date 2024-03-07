@@ -363,66 +363,111 @@ try:
     # machine 4
     # get speed setting:
     if ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Seam":
-        st.text_input(label="Heat", key="heat", value=float(0))
-        heat = float(ss["heat"])
-        st.text("Speed:")
-        st.info(tf.get_speed1055_4(heat))
-
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speed1055_4(heat))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
     # get heat setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Seam":
-        st.text_input(label="Speed", key="speed", value=float(0))
-        speed = float(ss["speed"])
-        st.text("Heat:")
-        st.info(tf.get_heat1055_4(speed))
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heat1055_4(speed))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
     # get speed setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1365" and ssseamtape == "Seam":
-        st.text_input(label="Heat", key="heat", value=float(0))
-        heat = float(ss["heat"])
-        st.text("Speed:")
-        st.info(tf.get_speed1365_4(heat))
-
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speed1365_4(heat))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
 
     # get heat setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1365" and ssseamtape == "Seam":
-        st.text_input(label="Speed", key="speed", value=float(0))
-        speed = float(ss["speed"])
-        st.text("Heat:")
-        st.info(tf.get_heat1365_4(speed))
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heat1365_4(speed))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
     # get speed setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Seam":
-        st.text_input(label="Heat", key="heat", value=float(0))
-        heat = float(ss["heat"])
-        st.text("Speed:")
-        st.info(tf.get_speed2051_4(heat))
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speed2051_4(heat))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
 
 
     # get heat setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Seam":
-        st.text_input(label="Speed", key="speed", value=float(0))
-        speed = float(ss["speed"])
-        st.text("Heat:")
-        st.info(tf.get_heat2051_4(speed))
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heat2051_4(speed))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
     # get speed setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Seam":
-        st.text_input(label="Heat", key="heat", value=float(0))
-        heat = float(ss["heat"])
-        st.text("Speed:")
-        st.info(tf.get_speed4090_4(heat))
-
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speed4090_4(heat))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
 
     # get heat setting:
     elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "4090" and ssseamtape == "Seam":
-        st.text_input(label="Speed", key="speed", value=float(0))
-        speed = float(ss["speed"])
-        st.text("Heat:")
-        st.info(tf.get_heat4090_4(speed))
+        st.selectbox("Wheel Size", ["1 in", "1.5 in", "2 in"], key="wheel_size")
+        if st.session_state["wheel_size"] == "1 in":
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heat4090_4(speed))
+        elif st.session_state["wheel_size"] == "1.5 in":
+            pass
+        elif st.session_state["wheel_size"] == "2 in":
+            pass
 
 
     # get speed setting:
