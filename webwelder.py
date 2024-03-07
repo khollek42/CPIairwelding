@@ -500,10 +500,10 @@ try:
             st.info(tf.get_speed4090_4(heat))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
-            # st.text_input(label="Heat", key="heat", value=float(0))
-            # heat = float(ss["heat"])
-            # st.text("Speed:")
-            # st.info(tf.get_speed4090_4_15(heat))
+            st.text_input(label="Heat", key="heat", value=float(0))
+            heat = float(ss["heat"])
+            st.text("Speed:")
+            st.info(tf.get_speed4090_4_15(heat))
         elif st.session_state["wheel_size"] == "2 in":
             pass
             # st.text_input(label="Heat", key="heat", value=float(0))
@@ -522,10 +522,10 @@ try:
             st.info(tf.get_heat4090_4(speed))
         elif st.session_state["wheel_size"] == "1.5 in":
             pass
-            # st.text_input(label="Speed", key="speed", value=float(0))
-            # speed = float(ss["speed"])
-            # st.text("Heat:")
-            # st.info(tf.get_heat4090_4_15(speed))
+            st.text_input(label="Speed", key="speed", value=float(0))
+            speed = float(ss["speed"])
+            st.text("Heat:")
+            st.info(tf.get_heat4090_4_15(speed))
         elif st.session_state["wheel_size"] == "2 in":
             pass
             # st.text_input(label="Speed", key="speed", value=float(0))

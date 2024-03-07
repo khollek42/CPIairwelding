@@ -733,21 +733,21 @@ def get_speed4090_4(heat):
     return result
 
 def get_heat4090_4_15(speed):
-    x = (1395.54 * speed) + 9901.57
+    x = (948.23 * speed) + 9105.94
     i = math.log(x)
-    n = 1231.18 * i
-    result = n - 11100.9
+    n = 1189.59 * i
+    result = n - 10587
     return result
 
 
 def get_speed4090_4_15(heat):
     heat1 = heat * 100
-    heat2 = heat1 + 1110090
-    heat3 = heat2 / 123118
+    heat2 = heat1 + 1058700
+    heat3 = heat2 / 118959
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 9901.57
-    result = heat5 / 1395.54
+    heat5 = heat4 - 9105.94
+    result = heat5 / 948.23
     return result
 
 def get_heat4090_4_20(speed):
