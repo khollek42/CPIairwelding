@@ -575,6 +575,22 @@ try:
         st.text("Speed:")
         st.info(tf.get_speedvinylt_1(heat))
 
+    # get speed setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed2051t_1(heat))
+
+
+
+    # get heat setting:
+    elif ssmachine == "Machine 1" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat2051t_1(speed))
+
 
 
     # get heat setting:
@@ -662,6 +678,21 @@ try:
     # Machine 4
     # Tape settings
     # get speed setting:
+    if ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed1055t_4(heat))
+
+
+
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "1055" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat1055t_4(speed))
+
     elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "4090" and ssseamtape == "Tape":
         st.text_input(label="Heat", key="heat", value=float(0))
         heat = float(ss["heat"])
@@ -675,9 +706,40 @@ try:
         st.text("Heat:")
         st.info(tf.get_heat4090t_4(speed))
 
+    # get speed setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "vinyl" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speedvinylt_4(heat))
 
-    st.subheader("This is a Tool/Guideline. Always check your weld. It is still under development.\
-     Adding new features soon! ")
+
+
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "vinyl" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heatvinylt_4(speed))
+
+    # get speed setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Speed" and ssmaterial == "2051" and ssseamtape == "Tape":
+        st.text_input(label="Heat", key="heat", value=float(0))
+        heat = float(ss["heat"])
+        st.text("Speed:")
+        st.info(tf.get_speed2051t_4(heat))
+
+
+
+    # get heat setting:
+    elif ssmachine == "Machine 4" and ssheatbox == "Heat" and ssmaterial == "2051" and ssseamtape == "Tape":
+        st.text_input(label="Speed", key="speed", value=float(0))
+        speed = float(ss["speed"])
+        st.text("Heat:")
+        st.info(tf.get_heat2051t_4(speed))
+
+
+    st.subheader("This is a Tool/Guideline. Always check your weld.")
 except ValueError:
     st.exception("Wrong input. Type in a number.")
 
