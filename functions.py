@@ -44,12 +44,13 @@ def get_speed1055t_1(heat):
     return result
 
 def get_heat1365_1(speed):
+    """formula for seaming 1365 on machine 1"""
     x = (593.806 * speed) + 7504.9
     i = math.log(x)
     n = 1364.18 * i
     result = n - 11950.3
     return result
-"""formula for seaming 1365 on machine 1"""
+
 
 def get_speed1365_1(heat):
     heat1 = heat * 100
@@ -62,12 +63,13 @@ def get_speed1365_1(heat):
     return result
 
 def get_heat1365t_1(speed):
+    """formula for tapeing 1365 on machine 1"""
     x = (9.8142 * speed) + 33.9848
     i = math.log(x)
     n = 494.602 * i
     result = n - 1609.4
     return result
-"""formula for seaming 1365 on machine 1"""
+
 
 def get_speed1365t_1(heat):
     heat1 = heat * 1000
@@ -229,21 +231,32 @@ def get_speed1055_2_2(heat):
     return result
 
 def get_heat1055t_2(speed):
-    temp = 1 + (speed * 1)
-    return temp
-"""formula for taping one machine 2"""
+    """formula for taping one machine 2"""
+    x = (865.785 * speed) + 9290.42
+    i = math.log(x)
+    n = 1243.27 * i
+    result = n - 11122.3
+    return result
+
 
 def get_speed1055t_2(heat):
-    speed = float((heat - 1) / 1)
-    return speed
+    heat1 = heat * 100
+    heat2 = heat1 + 1112230
+    heat3 = heat2 / 124327
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 9290.42
+    result = heat5 / 865.785
+    return result
 
 def get_heat1365_2(speed):
+    """formula for seaming 1365 on machine 2"""
     x = (593.806 * speed) + 7429.65
     i = math.log(x)
     n = 1364.18 * i
     result = n - 11950.3
     return result
-"""formula for seaming 1365 on machine 2"""
+
 
 def get_speed1365_2(heat):
     heat1 = heat * 100
@@ -328,13 +341,22 @@ def get_speed4090_2_2(heat):
     return result
 
 def get_heat4090t_2(speed):
-    temp = 1 + (speed * 1)
-    return temp
+    x = (627.388 * speed) + 6974.79
+    i = math.log(x)
+    n = 1049.79 * i
+    result = n - 9017.08
+    return result
 
 
 def get_speed4090t_2(heat):
-    speed = float((heat - 1) / 1)
-    return speed
+    heat1 = heat * 100
+    heat2 = heat1 + 901708
+    heat3 = heat2 / 104979
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 6974.79
+    result = heat5 / 627.388
+    return result
 
 def get_heat2051_2(speed):
     try:
@@ -356,13 +378,22 @@ def get_speed2051_2(heat):
     result = heat5 / 520.392
     return result
 def get_heat2051t_2(speed):
-    temp = 1 + (speed * 1)
-    return temp
+    x = (865.785 * speed) + 9290.42
+    i = math.log(x)
+    n = 1243.27 * i
+    result = n - 11122.3
+    return result
 
 
 def get_speed2051t_2(heat):
-    speed = float((heat - 1) / 1)
-    return speed
+    heat1 = heat * 100
+    heat2 = heat1 + 1112230
+    heat3 = heat2 / 124327
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 9290.42
+    result = heat5 / 865.785
+    return result
 
 
 def get_heatvinyl_2(speed):
@@ -410,8 +441,14 @@ def get_heatvinylt_2(speed):
 
 
 def get_speedvinylt_2(heat):
-    speed = float((heat - 1) / 1)
-    return speed
+    heat1 = heat * 100
+    heat2 = heat1 + 1730790
+    heat3 = heat2 / 185722
+    e = 2.7182818284590452353602874713527
+    heat4 = math.pow(e, heat3)
+    heat5 = heat4 - 12522.05
+    result = heat5 / 789.232
+    return result
 
 
 
@@ -787,21 +824,21 @@ def get_speed4090_4_20(heat):
     return result
 
 def get_heat4090t_4(speed):
-    x = (833.434 * speed) + 4991.15
+    x = (627.388 * speed) + 6974.79
     i = math.log(x)
-    n = 752.866 * i
-    result = n - 6177.85
+    n = 1049.79 * i
+    result = n - 9017.08
     return result
 
 
 def get_speed4090t_4(heat):
-    heat1 = heat * 1000
-    heat2 = heat1 + 6177850
-    heat3 = heat2 / 752866
+    heat1 = heat * 100
+    heat2 = heat1 + 901708
+    heat3 = heat2 / 104979
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 4991.15
-    result = heat5 / 833.434
+    heat5 = heat4 - 6974.79
+    result = heat5 / 627.388
     return result
 
 def get_heat2051_4(speed):
