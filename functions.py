@@ -26,21 +26,21 @@ def get_speed1055_1(heat):
     return result
 
 def get_heat1055t_1(speed):
-    x = (865.785 * speed) + 9290.42
+    x = (7.75223 * speed) + 17.8386
     i = math.log(x)
-    n = 1243.27 * i
-    result = n - 11122.3
+    n = 378.092 * i
+    result = n - 879.079
     return result
 """formula for taping on machine 1"""
 
 def get_speed1055t_1(heat):
-    heat1 = heat * 100
-    heat2 = heat1 + 1112230
-    heat3 = heat2 / 124327
+    heat1 = heat * 1000
+    heat2 = heat1 + 879079
+    heat3 = heat2 / 378092
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 9290.42
-    result = heat5 / 865.785
+    heat5 = heat4 - 17.8386
+    result = heat5 / 7.75223
     return result
 
 def get_heat1365_1(speed):
@@ -231,22 +231,21 @@ def get_speed1055_2_2(heat):
     return result
 
 def get_heat1055t_2(speed):
-    """formula for taping one machine 2"""
-    x = (865.785 * speed) + 9290.42
+    x = (7.75223 * speed) + 17.8386
     i = math.log(x)
-    n = 1243.27 * i
-    result = n - 11122.3
+    n = 378.092 * i
+    result = n - 879.079
     return result
-
+"""formula for taping on machine 1"""
 
 def get_speed1055t_2(heat):
-    heat1 = heat * 100
-    heat2 = heat1 + 1112230
-    heat3 = heat2 / 124327
+    heat1 = heat * 1000
+    heat2 = heat1 + 879079
+    heat3 = heat2 / 378092
     e = 2.7182818284590452353602874713527
     heat4 = math.pow(e, heat3)
-    heat5 = heat4 - 9290.42
-    result = heat5 / 865.785
+    heat5 = heat4 - 17.8386
+    result = heat5 / 7.75223
     return result
 
 def get_heat1365_2(speed):
